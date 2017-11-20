@@ -22,6 +22,7 @@ $ Singular foo.sing
 
 ## some tips
 ### Boolean
+```
 > int i=5;
 > i;
 5
@@ -32,6 +33,7 @@ $ Singular foo.sing
 0
 > i==6;
 1
+```
 
 So Singular uses 1 for TRUE and 0 for FALSE.
 

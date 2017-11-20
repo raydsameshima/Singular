@@ -1,0 +1,7 @@
+// comments, probable
+2+2;
+LIB "poly.lib";
+ring r=0, (a,b,c,d,e,f),lp;
+ideal I=cyclic(6);
+ideal GI=groebner(I);
+GI;

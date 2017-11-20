@@ -70,7 +70,7 @@ n
 That is, string in Singular is a list of characters, like Haskell.
 
 ### roading proc
-```gcd.sing 
+```singular
 // gcd 
 proc MY_GCD( int a, int b)
 {

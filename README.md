@@ -39,3 +39,5 @@ $ Singular foo.sing
 
 So Singular uses 1 for TRUE and 0 for FALSE.
 
+### _ for the latest line of output
+That is _ for Singular as it in Haskell, % in Maxima.

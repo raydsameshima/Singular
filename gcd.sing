@@ -1,0 +1,12 @@
+// gcd 
+proc MY_GCD( int a, int b)
+{
+  int r = a%b; // remainder?
+  while (r != 0)
+  {
+    a = b;
+    b = r;
+    r = a%b;
+  }
+  return (b);
+}

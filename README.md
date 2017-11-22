@@ -8,6 +8,8 @@ https://github.com/Singular/Sources/wiki/Singular-distribution-for-Mac-OS-X
 Great introduction to Singular;
 http://www.math.colostate.edu/~bates/courses/S09/676/singular_intro.pdf
 
+https://www.singular.uni-kl.de/DEMOS/SummerSchool-Trieste-09/Singular_Tutorial.pdf
+
 To find out some command,
 ```
 > help syz;
@@ -15,6 +17,11 @@ To find out some command,
 // ** Use 'system("--browser", <browser>);' to change browser,
 // ** where <browser> can be: "mac", "mac-net", "safari", "xinfo", "info", "mac-www", "safari-www-idx", "safari-www", "builtin", "dummy", "emacs".
 running `open /usr/local/bin/../Cellar/singular/4.1.0p3_1/bin/../share/singular/html/sing_351.htm &`
+```
+
+## shell
+```
+> system("sh","ls -G");
 ```
 
 ## in and out

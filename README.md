@@ -17,6 +17,9 @@ To find out some command,
 running `open /usr/local/bin/../Cellar/singular/4.1.0p3_1/bin/../share/singular/html/sing_351.htm &`
 ```
 
+## to do list
+AG note with Singular codes.
+
 ## in and out
 ### Examples 
 $ cat foo.sing 

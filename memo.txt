@@ -1,0 +1,52 @@
+2017/11/27
+
+Massless self-energy
+  L   =2
+  E+1 =2
+case.
+
+Here is my Singular session:
+
+> ring r=0,(x1,x2,x3,x4,x5),lp;
+> r;
+// coefficients: QQ
+// number of vars : 5
+//        block   1 : ordering lp
+//                  : names    x1 x2 x3 x4 x5
+//        block   2 : ordering C
+> matrix P[3][3]= x3,(x3+x4-x5)/2,(x1-x3-1)/2
+.               , (X3+x4-x5)/2,x4,(x2-x4-1)/2
+   ? `X3` is not defined
+. ;
+   ? error occurred in or before STDIN line 23: `;`
+   ? expected matrix-expression. type 'help matrix;'
+> matrix P[3][3]= x3,(x3+x4-x5)/2,(x1-x3-1)/2
+.               , (x3+x4-x5)/2,x4,(x2-x4-1)/2
+.               , (x1-x3-1)/2,(x2-x4-1)/2,1;
+> P;
+P[1,1]=x3
+P[1,2]=1/2*x3+1/2*x4-1/2*x5
+P[1,3]=1/2*x1-1/2*x3-1/2
+P[2,1]=1/2*x3+1/2*x4-1/2*x5
+P[2,2]=x4
+P[2,3]=1/2*x2-1/2*x4-1/2
+P[3,1]=1/2*x1-1/2*x3-1/2
+P[3,2]=1/2*x2-1/2*x4-1/2
+P[3,3]=1
+> det(P);
+-1/4*x1^2*x4+1/4*x1*x2*x3+1/4*x1*x2*x4-1/4*x1*x2*x5+1/4*x1*x3*x4-1/4*x1*x3-1/4*x1*x4^2+1/4*x1*x4*x5+1/4*x1*x4+1/4*x1*x5-1/4*x2^2*x3-1/4*x2*x3^2+1/4*x2*x3*x4+1/4*x2*x3*x5+1/4*x2*x3-1/4*x2*x4+1/4*x2*x5-1/4*x3*x4*x5+1/4*x3*x5+1/4*x4*x5-1/4*x5^2-1/4*x5
+> poly BaikovP=det(P);
+> BaikovP;
+-1/4*x1^2*x4+1/4*x1*x2*x3+1/4*x1*x2*x4-1/4*x1*x2*x5+1/4*x1*x3*x4-1/4*x1*x3-1/4*x1*x4^2+1/4*x1*x4*x5+1/4*x1*x4+1/4*x1*x5-1/4*x2^2*x3-1/4*x2*x3^2+1/4*x2*x3*x4+1/4*x2*x3*x5+1/4*x2*x3-1/4*x2*x4+1/4*x2*x5-1/4*x3*x4*x5+1/4*x3*x5+1/4*x4*x5-1/4*x5^2-1/4*x5
+> diff(BaikovP,x1);
+-1/2*x1*x4+1/4*x2*x3+1/4*x2*x4-1/4*x2*x5+1/4*x3*x4-1/4*x3-1/4*x4^2+1/4*x4*x5+1/4*x4+1/4*x5
+> diff(BaikovP,x2);
+1/4*x1*x3+1/4*x1*x4-1/4*x1*x5-1/2*x2*x3-1/4*x3^2+1/4*x3*x4+1/4*x3*x5+1/4*x3-1/4*x4+1/4*x5
+> diff(BaikovP,x3);
+1/4*x1*x2+1/4*x1*x4-1/4*x1-1/4*x2^2-1/2*x2*x3+1/4*x2*x4+1/4*x2*x5+1/4*x2-1/4*x4*x5+1/4*x5
+> diff(BaikovP,x4);
+-1/4*x1^2+1/4*x1*x2+1/4*x1*x3-1/2*x1*x4+1/4*x1*x5+1/4*x1+1/4*x2*x3-1/4*x2-1/4*x3*x5+1/4*x5
+> diff(BaikovP,x5);
+-1/4*x1*x2+1/4*x1*x4+1/4*x1+1/4*x2*x3+1/4*x2-1/4*x3*x4+1/4*x3+1/4*x4-1/2*x5-1/4
+> 
+

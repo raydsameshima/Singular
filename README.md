@@ -41,6 +41,11 @@ GI;
 ```
 $ Singular foo.sing
 
+In the Singular interpreter,
+```
+> < "foo.sing";
+```
+
 ## some tips
 ### Boolean
 
